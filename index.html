@@ -8,19 +8,19 @@
         <nav aria-labelledby="landingpagelabel">
             <ul class = "navbar">
                 <li> 
-                    <a href = "index.html" title = "Home">Home</a>
+                    <a href = "index.html" title = "Home" tabindex = "1">Home</a>
                 </li>
                 <li>
-                    <a href = "About_me.html" title = "About Me">About Me</a>
+                    <a href = "About_me.html" title = "About Me" tabindex = "2">About Me</a>
                 </li>
                 <li>
-                    <a href = "contact.html" title = "Contact">Contact</a>
+                    <a href = "contact.html" title = "Contact" tabindex = "3">Contact</a>
                 </li>
                 <li>
-                    <a href = "resume.html" title = "Resume">Resume</a>
+                    <a href = "resume.html" title = "Resume" tabindex = "4">Resume</a>
                 </li>
                 <li>
-                    <a href = "Feedback.html" title = "Feedback">Feedback</a>
+                    <a href = "Feedback.html" title = "Feedback" tabindex = "5">Feedback</a>
                 </li>
             </ul>
         </nav>
@@ -31,7 +31,7 @@
             </div> 
             <div class = "intro">
                 <h1>Hi! I'm John Lim</h1>
-                <p> A Second Year student pursuing B.S. in Computer Science and Electrical Engineering
+                <p tabindex = "6"> A Second Year student pursuing B.S. in Computer Science and Electrical Engineering
                     at Northwestern Universtity. Feel free to take look around to learn 
                     more about me. 
                 </p>
@@ -41,17 +41,21 @@
         <div class = "slideshow_container">
             <div class = "slide">
                 <a href = "project1.html">
-                    <img src = "test.PNG" alt = "Photo of Project 1">
+                    <img src = "project1.jpg" alt = "Photo of Project 1: Assistive Device">
                 </a>
             </div>
             <div class = "slide">
                 <a href = "project2.html">
-                    <img src = "bio.jpg" alt = "Photo of Project 2">
+                    <img src = "chess.png" alt = "Photo of Project 2: Chess Game">
                 </a>
             </div>
 
             <button class = "previous" onclick = "changeSlide(-1)">&#10094;</button>
             <button class = "next" onclick = "changeSlide(1)">&#10095;</button>
+
+        </div>
+
+        <div id = project_description>
 
         </div>
     </body>

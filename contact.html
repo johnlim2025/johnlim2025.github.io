@@ -8,46 +8,44 @@
         <nav aria-labelledby="landingpagelabel">
             <ul class = "navbar">
                 <li> 
-                    <a href = "index.html" title = "Home">Home</a>
+                    <a href = "index.html" title = "Home" tabindex = "1">Home</a>
                 </li>
                 <li>
-                    <a href = "About_me.html" title = "About Me">About Me</a>
+                    <a href = "About_me.html" title = "About Me" tabindex = "2">About Me</a>
                 </li>
                 <li>
-                    <a href = "contact.html" title = "Contact">Contact</a>
+                    <a href = "contact.html" title = "Contact" tabindex = "3">Contact</a>
                 </li>
                 <li>
-                    <a href = "resume.html" title = "Resume">Resume</a>
+                    <a href = "resume.html" title = "Resume" tabindex = "4">Resume</a>
                 </li>
                 <li>
-                    <a href = "Feedback.html" title = "Feedback">Feedback</a>
+                    <a href = "Feedback.html" title = "Feedback" tabindex = "5">Feedback</a>
                 </li>
             </ul>
         </nav>
 
         <div class = "contact">
             <h1>I would love to talk to you!</h1>
-            <ul class = "contact-list">
-                <li>Email  JohnLim2025@u.northwestern.edu</li>
-                <li>Phone Number  +1 224 507 2372</li>
-                <li>Instagram  <a href = "https://www.instagram.com/johnlim396">@johnlim396</a></li>
-            </ul>
+            <p>Email  JohnLim2025@u.northwestern.edu</p>
+            <p>Phone Number  +1 224 507 2372</p>
+            <p>Instagram  <a href = "https://www.instagram.com/johnlim396" tabindex = "6">@johnlim396</a></p>
         </div>
 
         <div class = "reach_out">
-            <h1 id = "form_text">Let me reach out!</h1>
+            <h1>Let me reach out!</h1>
             <form class = "reach_form" name = "reach_form" onsubmit = "return validateForm()" method = "post">
-                <input type = "text" id = "x" name = "name" placeholder = "Full name"><br>
-                <input type = "text" name = "number" placeholder = "Phone Number"><br>
-                <input type = "text" name = "mail" placeholder = "Your E-Mail Address"><br>
-                <input type = "text" name = "subject" placeholder = "Subject"><br>
+                <input type = "text" name = "name" placeholder = "Full name" tabindex = "7"><br>
+                <input type = "text" name = "number" placeholder = "Phone Number (Just Number) " tabindex = "8"><br>
+                <input type = "text" name = "mail" placeholder = "Your E-Mail Address" tabindex = "9"><br>
+                <input type = "text" name = "subject" placeholder = "Subject" tabindex = "10"><br>
                 <p>Preferred Method of Contact (Optional)</p>
-                <input type = "checkbox" id = "method_number" name = "method_number">
+                <input type = "checkbox" id = "method_number" name = "method_number" tabindex = "11">
                 <label for = "method_number">Phone Number</label><br>
-                <input type = "checkbox" id = "method_mail" name = "method_mail">
+                <input type = "checkbox" id = "method_mail" name = "method_mail" tabindex = "12">
                 <label for = "method_number">E-Mail</label><br>
-                <textarea name = "message" placeholder = "Message"></textarea><br>
-                <button type = "submit" name = "submit">submit</button>
+                <textarea name = "message" placeholder = "Message" tabindex = "13"></textarea><br>
+                <button type = "submit" name = "submit" tabindex = "14">submit</button>
             </form>
         </div>
     </body>

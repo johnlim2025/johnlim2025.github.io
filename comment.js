@@ -1,4 +1,3 @@
-// utility functions for localstorage
 function setObject(key, value) {
     window.localStorage.setItem(key, JSON.stringify(value));
   }
@@ -11,7 +10,6 @@ function setObject(key, value) {
     window.localStorage.clear();
   }
   
-  // Clear inputfields and localstorage
   function clearComment(){
     $('#txt1').val('');
     $('#namebox').val('');
@@ -20,15 +18,24 @@ function setObject(key, value) {
   }
   
   function saveComment(){
-    var cText = $('#txt1').val(),
-        cName = $('#namebox').val(),
+    var commentText = $('#txt1').val(),
+        commentName = $('#namebox').val(),
         cmtList = getObject('cmtlist');
+
+    if (commentName.trim().length == 0) {
+      commentName = "Anonymous";
+    }
+
+    if (commentText.trim().length == 0) {
+      window.alert("Please Enter a Comment!");
+      return
+    }
   
     if (cmtList){
-      cmtList.push({name: cName, text: cText});
+      cmtList.push({name: commentName, text: commentText});
       setObject('cmtlist', cmtList);
-    }else{ //Add a comment
-      setObject('cmtlist', [{name: cName, text: cText}]);
+    }else{ 
+      setObject('cmtlist', [{name: commentName, text: commentText}]);
     }
   
     bindCmt();
@@ -38,15 +45,14 @@ function setObject(key, value) {
     var cmtListElement = $('#cmtlist'),
         cmtList = getObject('cmtlist');
   
-    //Out with the old
+
     cmtListElement.empty();
-    //And in with the new
+
     $.each(cmtList, function(i, k){
       cmtListElement.append( $('<div class = "comments"> <span class = "comment_name">'+ k.name +'</span><br><span class = "comment_text">'+ k.text +'</span></div>') );
     });
   }
   
-  //Get the comments on page ready
   $(function(){
     bindCmt();
   });

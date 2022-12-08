@@ -7,27 +7,27 @@ function validateForm() {
     
 
     if (name == "" || regName.test(name)) {
-        window.alert("Invalid Entry for Your Name!");
+        window.alert("Please Enter a Valid Name!");
         return false;
     }
 
     if (number == "" || number.length < 7 || isNaN(number)) {
-        window.alert("Invalid Entry for Your Phone Number!");
+        window.alert("Please Enter a Valid Phone Number!");
         return false;
     }
 
     if (email == "" || !(email.includes("@")) || email.length < 4) {
-        window.alert("Invalid Entry for Your Email!");
+        window.alert("Please Enter a Valid Email!");
         return false;
     }
 
     if (subject == "") {
-        window.alert("Please enter a subject!");
+        window.alert("Please Enter a Subject!");
         return false;
     }
 
 
-    window.alert("Thanks for reaching out!");
+    window.alert("Thanks for Reaching Out!");
     return true;
 
 }

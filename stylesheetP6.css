@@ -1,9 +1,20 @@
+
+/* Applied to even element intitially */
+
 * {
     margin: 0;
     padding: 0;
     border: 0;
     box-sizing: border-box;
+    font-family: Calibri, sans-serif 
 }
+
+a:visited {
+    text-decoration: none;
+}
+
+
+/* Navigation Bar */
 
 .navbar {
     width: 100%;
@@ -21,7 +32,7 @@
 }
 
 .navbar li a {
-
+    font-size: 25px;
     background-color: CFEC9D;
     border-radius: 25px;
     background-position: center;
@@ -29,6 +40,14 @@
     padding: 20px;
     text-decoration: none;
     line-height: 60px;
+    box-shadow: 4px 4px 2px rgb(158, 215, 143);
+}
+
+.navbar li a:visited {
+
+    text-decoration: none;
+    color: black;
+    
 }
 
 .navbar li a:hover {
@@ -48,8 +67,11 @@
         float: none;
         width: 100%;
         height: 100%;
+        margin-top: 2%;
     }
 }
+
+/* Landing Page/Index */
 
 .bio {
     display: flex;
@@ -68,10 +90,11 @@
     border-radius: 50%;
     width: 100%;
     height: 100%;
+    box-shadow: 4px 4px 2px rgb(158, 215, 143);
 }
 
 .intro {
-    vertical-align: middle;
+    font-size: 16px;
     margin-left: 5%;
     padding: 5%;
     width: 20%;
@@ -80,7 +103,9 @@
     margin-top: 40px;
     background-color: CFEC9D;
     border-radius: 100px;
+    word-wrap: break-word;
     overflow: auto;
+    box-shadow: 4px 4px 2px rgb(158, 215, 143);
 }
 
 .slideshow_container {
@@ -102,6 +127,50 @@
     border-radius: 100px;
 }
 
+#project_description {
+    text-align: center;
+}
+
+#project_description h1 {
+    margin: 20px;
+}
+
+#project_description p {
+    margin: auto;
+    box-shadow: 4px 4px 2px rgb(158, 215, 143);
+    background-color: CFEC9D;
+    border-radius: 25px;
+    padding: 10px;
+    width: 40%;
+    margin-bottom: 30px;
+
+}
+
+.previous, 
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 20px;
+    color: 0F4800;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.5s;
+    border-radius: 0px 3px 3px 0px;
+    user-select: none;
+}
+
+.next {
+    border-radius: 3px 0px 0px 3px;
+    right: 0;
+}
+
+.previous:hover,
+.next:hover {
+    background-color: rgba(158, 215, 143, 0.7);
+}
+
 @media screen and (max-width: 1000px) {
 
     .bio {
@@ -115,7 +184,7 @@
         min-width: 450px;
         margin-left: 5%;
         margin-bottom: 5%;
-        margin-top: 60px;
+        margin-top: 400px;
     }
     
     .intro {
@@ -132,51 +201,7 @@
 
 }
 
-.previous, 
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 20px;
-    color: green;
-    font-weight: bold;
-    font-size: 20px;
-    transition: 0.5s;
-    border-radius: 0px 3px 3px 0px;
-    user-select: none;
-}
-
-.next {
-    border-radius: 3px 0px 0px 3px;
-    right: 0;
-}
-
-.previous:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-.resume_introduction {
-    text-align: center;
-    padding: 0px 0 30px 0;
-}
-
-.resume_introduction p {
-    font-size: 15px;
-    padding: 30px 0 0px 0;
-}
-
-.resume_container {
-    text-align: center;
-}
-
-.resume_container iframe {
-    width: 60%;
-    height: 90%;
-    margin-top: -30px;
-}
-
+/* About Me Page */
 
 .about_me_text {
     text-align: center; 
@@ -185,25 +210,35 @@
     margin-top: 30px;
     margin-left: 10%;
     margin-right: 10%;
-
 }
 
 .about_me_photo {
     width: 30%;
     margin-top: 60px;
+    border-radius: 40px;
+    box-shadow: 4px 4px 2px rgb(158, 215, 143);
 }
 
 .about_me_text h1 {
-    margin-top: 30px;
+    margin-top: 60px;
     line-height: 60px;
+    
 }
 .about_me_text p {
+    font-size: 18px;
     text-align: left;
     line-height: 30px;
+    background-color: CFEC9D;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 4px 4px 2px rgb(158, 215, 143);
 }
 
 @media screen and (max-width: 1000px) {
     
+    .about_container {
+        margin-top: 350px;
+    }
 
     .about_me_text {
         float: none;
@@ -224,129 +259,207 @@
     }
 }
 
+/* Contact Page */
+
 .contact {
-    float: left;
-    width: 40%;
-    height: 40%;
-    margin-left: 23%;
-    margin-top: 5%;
+    text-align: center;
+
 }
 
 .contact h1 {
-    margin-bottom: 30px;
-    padding-left: 17px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: CFEC9D;
-    border-radius: 100px;
-    width: 400px;
-
+    margin-bottom: 2%;
+    font-size: 50px;
 }
 
-.contact-list {
-    background-color: CFEC9D;
-    padding-left: 40px;
-    width: 350px;
-    border-radius: 100px;
-}
-
-.contact-list li {
+.contact p {
+    font-size: 20px;
     line-height: 40px;
-    list-style: none;
+    background-color: CFEC9D;
+    box-shadow: 4px 4px 2px rgb(158, 215, 143);
+    width: 400px;
+    margin: auto;
 }
-
 
 .reach_out {
-    margin-top: 5%;
+    margin-top: 40px;
+    margin-bottom: 100px;
+    max-height: 100%;
+    text-align: center;
 }
 
 .reach_form * {
-    margin-top: 30px;
+    font-size: 20px;
+    margin-top: 50px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: CFEC9D;
+    box-shadow: 4px 4px 2px rgb(158, 215, 143);
+
 }
 
-@media screen and (max-width: 1600px) {
+.reach_form p {
+    border: none;
+    font-weight: bold;
+    font-size: 24px;
+    background-color: white;
+    box-shadow: none;
+}
 
+.reach_form textarea {
+    margin: auto;
+    margin-top: 40px;
+    width: 30%;
+    height: 10%;
+}
+
+.reach_form button {
+    font-size: 24px;
+}
+
+@media screen and (max-width: 1000px) {
     .contact {
-        float: none;
-        width: 100%;
-        height: 30%;
-        margin-left: 0%;
-        text-align: center;
+        margin-top: 350px;
     }
+}
+
+
+/* Resume Page */
+
+.resume_introduction {
+    text-align: center;
+    padding: 0px 0 30px 0;
+}
+
+.resume_introduction p {
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 30%;
+    border-radius: 15px;
+    box-shadow: 4px 4px 2px rgb(158, 215, 143);
+    background-color: CFEC9D;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.resume_container {
+    text-align: center;
     
-    .contact h1 {
-        margin-bottom: 0px;
-        padding-left: 0px;
-        padding-top: 0px;
-        padding-bottom: 0px;
-        background-color: CFEC9D;
-        border-radius: 0px;
+}
+
+.resume_container iframe {
+    width: 800px;
+    height: 90%;
+    margin-top: -30px;
+}
+
+@media screen and (max-width: 1000px) {
+
+    .resume_container iframe {
+        width: 60%;
+        height: 90%;
+        margin-top: -30px;
     }
-    
-    .contact-list {
-        background-color: CFEC9D;
-        padding-left: 0px;
-        border-radius: 0px;
-    }
-    
-    .contact-list li {
-        line-height: 40px;
-        list-style: none;
-    }
-    
-    
-    .reach_out {
-        margin-top: 40px;
-        margin-bottom: 100px;
-        max-height: 100%;
-        text-align: center;
-    }
-    
-    .reach_form * {
-        margin-top: 30px;
+
+    .resume_introduction {
+        margin-top: 350px;
     }
 
 }
 
+/* Feedback Page */
 
 #comment_container * {
     margin-bottom: 20px;
-    margin-left: 30px;
+    margin-left: 5%;
 }
 
-.navbutton {
+#comment_container #namebox {
+    background-color: CFEC9D;
+    width: 10%;
+    min-width: 110px;
+    height: 2%;
+    box-shadow: 4px 4px 2px rgb(158, 215, 143);
+
+}
+
+#comment_container #txt1 {
+    background-color: CFEC9D;
+    width: 30%;
+    height: 10%;
+    box-shadow: 4px 4px 2px rgb(158, 215, 143);
+}
+
+::placeholder {
+    font-weight: bold;
+    color: black;
+    font-size: 15px;
+}
+
+.navbutton1,
+.navbutton2 {
     margin-bottom: 20px;
-    margin-left: 30px;
+    margin-left: 5%;
+    padding: 5px;
+    background-color: CFEC9D;
+    box-shadow: 4px 4px 2px rgb(158, 215, 143);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.navbutton2 {
+    margin-left: 1%;
+}
+
+
+#cmtlist {
+    background-color: CFEC9D;
+    border-radius: 50px;
+    box-shadow: 4px 4px 2px rgb(158, 215, 143);
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    padding-bottom: 50px;
 }
 
 #cmtlist .comments {
-    margin-left: 50px;
+    margin-left: 5%;
     margin-top: 50px;
+    margin-right: 5%;
 }
 
 .comment_heading {
-    margin-left: 30px;
+    margin-left: 5%;
+    margin-top: 5%;
+    font-size: 30px;
 }
 
 #cmtlist .comment_name{
-    font-size: 20px;
+    margin-left: -3%;
+    font-size: 22px;
     font-weight: bold;
-    line-height: 30px;
-    background-color: CFEC9D;
-    border-radius: 10px;
+    line-height: 70px;
     padding: 3px;
-    
-
+    word-wrap: break-word;
 }
 
 #cmtlist .comment_text{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
-    background-color: 58AC58;
-    border-radius: 10px;
     padding: 3px;
+    word-wrap: break-word;
 
 }
+
+@media screen and (max-width: 1000px) {
+
+    #comment_container {
+        margin-top: 350px;
+    }
+}
+
+/* Project 1 Page */
 
 .project1_container {
     text-align: center;
@@ -355,12 +468,14 @@
 
 .project1_container img {
     height: 55%;
+    border-radius: 30px;
 }
 
 .project1_container h1, h2 {
     margin: auto;
     margin-bottom: 20px;
     width: 40%;
+    padding: 15px;
 
 }
 
@@ -379,7 +494,7 @@
 }
 
 .prototype_description img {
-    width: 40%;
+    width: 60%;
     height: 50%;
     border-radius: 25px;
 }
@@ -390,7 +505,14 @@
     margin-top: 30px;
     background-color: CFEC9D;
     border-radius: 15px;
-    padding: 5px;
+    padding: 10px;
+    margin-bottom: 20%;
+}
+
+@media screen and (max-width: 1000px) {
+    .project1_container {
+        margin-top: 350px;
+    }
 }
 
 

@@ -8,31 +8,31 @@
         <nav aria-labelledby="landingpagelabel">
             <ul class = "navbar">
                 <li> 
-                    <a href = "index.html" title = "Home">Home</a>
+                    <a href = "index.html" title = "Home" tabindex = "1">Home</a>
                 </li>
                 <li>
-                    <a href = "About_me.html" title = "About Me">About Me</a>
+                    <a href = "About_me.html" title = "About Me" tabindex = "2">About Me</a>
                 </li>
                 <li>
-                    <a href = "contact.html" title = "Contact">Contact</a>
+                    <a href = "contact.html" title = "Contact" tabindex = "3">Contact</a>
                 </li>
                 <li>
-                    <a href = "resume.html" title = "Resume">Resume</a>
+                    <a href = "resume.html" title = "Resume" tabindex = "4">Resume</a>
                 </li>
                 <li>
-                    <a href = "Feedback.html" title = "Feedback">Feedback</a>
+                    <a href = "Feedback.html" title = "Feedback" tabindex = "5">Feedback</a>
                 </li>
             </ul>
         </nav>
 
         <div id = "comment_container">
-            <h1>Comments</h1>
-            <input id="namebox" type="text" maxlength="32" size="20" placeholder="Name" />
+            <h1>Leave a Comment!</h1>
+            <input id="namebox" type="text" maxlength="32" size="20" placeholder="Name (Optional)" />
             <br/>
             <textarea id="txt1" class="textbox" rows="6" placeholder="Your comment"></textarea>
         </div>
-        <button class="navbutton" onClick="clearComment()">Clear Comment</button>
-        <button class="navbutton" onClick="saveComment()">Save Comment </button>
+        <!--<button class="navbutton1" onClick="clearComment()">Clear Comment</button>-->
+        <button class="navbutton1" onClick="saveComment()">Save Comment </button>
         <h3 class = "comment_heading">Comments</h3>
 
         <div id="cmtlist">
