@@ -290,11 +290,15 @@ a:visited {
 .reach_form * {
     font-size: 20px;
     margin-top: 50px;
-    border-radius: 10px;
     padding: 10px;
     background-color: CFEC9D;
-    box-shadow: 4px 4px 2px rgb(158, 215, 143);
+    border-radius: 10px;
+}
 
+.reach_form label {
+    background-color: CFEC9D;
+    box-shadow: 4px 4px 2px rgb(158, 215, 143);
+    border-radius: 10px;
 }
 
 .reach_form p {
